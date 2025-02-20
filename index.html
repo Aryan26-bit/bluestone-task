@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://your-font-cdn.com/muli.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader-container">
+      <div class="loader"></div>
+    </div>
+
+    <div id="content" class="hidden">
+      <header class="top-header">
+        <div class="nav-icons-leftside">
+          <span class="phone-head"
+            ><i class="fa-solid fa-phone"></i> 18004190066</span
+          >
+          <span class="video-call-head"
+            ><a href="#" class="remove-line">Video Call Cart</a></span
+          >
+
+          <a href="#" class="remove-line">Signup</a>
+        </div>
+        <div class="container-bluestone">
+          <div class="logo">
+            <img src="images\logo.jpg" width="277px" height="66px" />
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search for Jewellery" />
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="nav-icons">
+            <span class="recently-viewed-head"
+              ><i class="fa-regular fa-clock"></i> Recently Viewed</span
+            >
+            <span class="locate-our-store"
+              ><i class="fa-solid fa-location-dot"></i> Locate Our Store</span
+            >
+            <span class="like-head"><i class="fa-regular fa-heart"></i></span>
+            <span id="cart-icon"
+              ><i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count">0</span></span
+            >
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li>10+1 Monthly Plan</li>
+            <li>Watch Jewellery <i class="fa-solid fa-caret-down"></i></li>
+            <li>Rings <i class="fa-solid fa-caret-down"></i></li>
+            <li>Earrings <i class="fa-solid fa-caret-down"></i></li>
+            <li>Pendants <i class="fa-solid fa-caret-down"></i></li>
+            <li>Solitaires <i class="fa-solid fa-caret-down"></i></li>
+            <li>All Jewellery <i class="fa-solid fa-caret-down"></i></li>
+            <li>Gifts <i class="fa-solid fa-caret-down"></i></li>
+            <li>Gold Coins <i class="fa-solid fa-caret-down"></i></li>
+            <li>Offers <i class="fa-solid fa-caret-down"></i></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="carousel hidden" id="carouselContainer">
+        <div class="arrows">
+          <span class="arrow" onclick="prevImage()">&#9664;</span>
+          <span class="arrow" onclick="nextImage()">&#9654;</span>
+        </div>
+        <img id="mainImage" class="main-image" src="" alt="Product Image" />
+        <div class="thumbnails" id="thumbnails"></div>
+      </div>
+
+      <div class="product-info">
+        <h2 id="product-name">Product Name</h2>
+        <p id="product-price">Price: $49.99</p>
+        <p id="product-description">Description of the product goes here.</p>
+        <label for="variant">Choose a variant:</label>
+        <select id="variant">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+      </div>
+
+      <div class="cart" id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li><a href="#">Who we are?</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Design Philosophy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>POLICIES</h3>
+          <ul>
+            <li><a href="#">30-Day Returns</a></li>
+            <li><a href="#">Lifetime Exchange & Buy back</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Fraud Warning Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>JEWELLERY GUIDE</h3>
+          <ul>
+            <li><a href="#">Buying and Price Guide</a></li>
+            <li><a href="#">Certification Guide</a></li>
+            <li><a href="#">Diamond and Solitaire Guide</a></li>
+            <li><a href="#">Gemstone Guide</a></li>
+            <li><a href="#">Gifting Guide</a></li>
+            <li><a href="#">Jewellery Care Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Download Our App</h3>
+          <p>Shining new app, made just for you! It's Free, Easy & Smart.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BlueStone. All Rights Reserved.</p>
+        <p>CIN: U72900KA2011PLC059678</p>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
